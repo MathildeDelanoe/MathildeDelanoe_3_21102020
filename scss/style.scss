@@ -1,0 +1,38 @@
+$breakpoints:
+(
+  mobile:415px,
+  desktop:1024px
+);
+
+@mixin bigscreen-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)){
+      @content;
+  }
+}
+
+.fa-arrow-left{
+  position:absolute;
+  top:5px;
+  left:15px;
+}
+
+header
+{
+  width: 100%;
+  position:relative;
+  a{
+    color:black;
+  }
+
+  figure{
+    text-align: center;
+    margin:0;
+    img{
+      width: 40%;
+      @include bigscreen-only{
+        width: 10%;
+      }
+    }
+  }
+
+}
