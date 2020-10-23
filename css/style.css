@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot") format("eot");
+}
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 .fa-arrow-left {
   position: absolute;
   top: 5px;
@@ -22,6 +30,56 @@ header figure img {
   header figure img {
     width: 10%;
   }
+}
+
+.localisation {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  box-shadow: inset 0 2px 2px 0px #b4b4b4;
+}
+.localisation i {
+  margin-right: 15px;
+  font-size: 12px;
+}
+.localisation p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.description {
+  height: 270px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .description {
+    height: 220px;
+  }
+}
+.description h1, .description h2 {
+  margin: auto;
+}
+.description h1 {
+  width: 70%;
+  padding-top: 30px;
+  font-size: 1.3em;
+}
+.description h2 {
+  width: 80%;
+  padding-top: 20px;
+  font-weight: normal;
+  font-size: 1em;
+}
+.description button {
+  margin-top: 40px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
