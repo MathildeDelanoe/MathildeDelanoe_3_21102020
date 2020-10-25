@@ -2,8 +2,27 @@
   font-family: "Roboto";
   src: url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot") format("eot");
 }
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../shrikhand/Shrikhand-Regular.otf") format("opentype");
+}
 body {
   font-family: Roboto, Arial, sans-serif;
+}
+
+h4 {
+  font-family: Shrikhand, Arial, sans-serif;
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+@media screen and (min-width: 415px) {
+  h4 {
+    text-align: center;
+    font-size: 1.8em;
+  }
 }
 
 .fa-arrow-left {
@@ -221,6 +240,37 @@ h3 {
   display: flex;
   align-items: center;
   font-size: 1.1em;
+}
+
+footer {
+  height: 180px;
+  background-color: #3c3c3c;
+  color: white;
+  font-size: 0.8em;
+}
+footer ul {
+  padding: 0;
+  margin-top: 10px;
+}
+footer ul li {
+  padding: 5px 5px 0 20px;
+  list-style-type: none;
+}
+@media screen and (min-width: 415px) {
+  footer ul li {
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li .fa-utensils {
+  margin-right: 10px;
+}
+footer ul li i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
