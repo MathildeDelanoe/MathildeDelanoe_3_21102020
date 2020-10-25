@@ -6,9 +6,11 @@
     url('../roboto-fontfacekit/web_fonts/roboto_regular_macroman/Roboto-Regular-webfont.eot') format('eot');
 }
 
-body
+@font-face
 {
-  font-family: Roboto, Arial, sans-serif;
+    font-family: 'Shrikhand';
+    src: url('../shrikhand/Shrikhand-Regular.otf') format('opentype');
+    
 }
 
 $breakpoints:
@@ -18,10 +20,41 @@ $breakpoints:
 );
 
 @mixin bigscreen-only {
-  @media screen and (min-width: map-get($breakpoints, desktop)){
+  @media screen and (min-width: map-get($breakpoints, desktop))
+  {
       @content;
   }
 }
+
+@mixin notMobile {
+  @media screen and (min-width: map-get($breakpoints, mobile))
+  {
+      @content;
+  }
+}
+
+body
+{
+  font-family: Roboto, Arial, sans-serif;
+}
+
+h4
+{
+  font-family: Shrikhand,Arial,sans-serif;
+  margin:0;
+  font-size: 1.2em;
+  font-weight: normal;
+  padding-top:30px;
+  margin-left:20px;
+  @include notMobile
+  {
+    text-align: center;
+    font-size:1.8em;
+  }
+}
+
+
+
 
 .fa-arrow-left{
   position:absolute;
@@ -270,4 +303,39 @@ h3
  }
 }
 
-  
+footer
+{
+  height:180px;
+  background-color:rgb(60,60,60);
+  color:white;
+  font-size: 0.8em;
+  ul
+  {
+    padding:0;
+    margin-top:10px;
+    li
+    {
+      padding:5px 5px 0 20px;
+      list-style-type: none;
+      @include notMobile
+      {
+        text-align: center;
+        font-size: 1.2em;
+      }
+      a
+      {
+        color:white;
+        text-decoration: none;
+      }
+      .fa-utensils
+      {
+        margin-right: 10px;
+      }
+      i
+      {
+        margin-right:5px;
+      }
+    }
+  }
+
+}
