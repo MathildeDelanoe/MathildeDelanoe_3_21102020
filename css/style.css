@@ -92,7 +92,8 @@ header figure img {
   font-weight: normal;
   font-size: 1em;
 }
-.description button {
+
+button {
   margin-top: 40px;
   border-radius: 20px;
   padding: 10px 20px;
@@ -271,6 +272,118 @@ footer ul li .fa-utensils {
 }
 footer ul li i {
   margin-right: 5px;
+}
+
+.francaise {
+  background-color: whitesmoke;
+  margin-top: -40px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px 30px 0px 0px;
+}
+.francaise h1 {
+  font-family: Shrikhand, Arial, sans-serif;
+  margin-bottom: 0;
+}
+.francaise > div {
+  width: 90%;
+  padding-bottom: 10px;
+}
+.francaise > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.francaise .fa-heart {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.francaise h2 {
+  font-size: 0.9em;
+  font-weight: normal;
+  position: relative;
+  padding-top: 10px;
+}
+.francaise h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  border-bottom: 2px solid #99E2D0;
+}
+.francaise button {
+  width: 40%;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.vignettes_menu {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.vignettes_menu div {
+  display: flex;
+  justify-content: space-between;
+}
+.vignettes_menu div p:first-child {
+  font-size: 0.9em;
+}
+.vignettes_menu p {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.nom, .prix {
+  font-weight: bold;
+  margin: 0;
+}
+
+.nom {
+  padding-top: 8px;
+}
+
+.prix {
+  padding-right: 10px;
+  font-size: 0.9em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu > div {
+    width: 30%;
+  }
+}
+
+.photo_pres {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.photo_pres img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .photo_pres img {
+    height: 600px;
+    margin-top: -200px;
+    object-fit: cover;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
