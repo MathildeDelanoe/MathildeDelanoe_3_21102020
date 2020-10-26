@@ -16,7 +16,7 @@
 $breakpoints:
 (
   mobile:415px,
-  desktop:1024px
+  desktop:1025px
 );
 
 @mixin bigscreen-only {
@@ -28,6 +28,13 @@ $breakpoints:
 
 @mixin notMobile {
   @media screen and (min-width: map-get($breakpoints, mobile))
+  {
+      @content;
+  }
+}
+
+@mixin tablets-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop))
   {
       @content;
   }
@@ -54,25 +61,34 @@ h4
 }
 
 
-
-
 .fa-arrow-left{
   position:absolute;
   top:5px;
-  left:15px;
+  left:15px; 
+  @include tablets-only
+  {
+    top:30%;
+    font-size:1.5em;
+  }
+  @include bigscreen-only
+  {
+    font-size:1.5em;
+  }
 }
 
 header
 {
   width: 100%;
+  margin: 10px 0px 10px 0px;
   position:relative;
   a
   {
+    width:10%;
     color:black;
   }
-
   figure
   {
+    width:90%;
     text-align: center;
     margin:0;
     img
@@ -84,7 +100,11 @@ header
       }
     }
   }
+}
 
+.fig_index
+{
+  width:100%;
 }
 
 .localisation
@@ -143,6 +163,10 @@ button
   color:white;
   background:linear-gradient(#FF79DA,#9356DC);
   border:none;
+  cursor: pointer;
+  &:active{
+    box-shadow: inset 5px 5px 5px #9356DC;
+  }
 }
 
 h3
@@ -210,7 +234,6 @@ h3
   }
 }
 
-
 .restaurants
 {
   background-color:rgb(240,240,240);
@@ -266,6 +289,7 @@ h3
  figure
  {
    margin:0;
+   overflow:hidden;
  }
  img
  {
@@ -275,7 +299,8 @@ h3
    object-fit: cover;
    @include bigscreen-only
    {
-     height:200px;
+     height:300px;
+     margin-top:-100px;
    }
  }
  .info_restaurants
@@ -398,6 +423,7 @@ footer
 
 .vignettes_menu
 {
+  height:60px;
   background-color:white;
   border-radius: 10px;
   margin-bottom:10px;
