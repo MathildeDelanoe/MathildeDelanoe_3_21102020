@@ -162,10 +162,13 @@ button
   padding:10px 20px;
   color:white;
   background:linear-gradient(#FF79DA,#9356DC);
+  box-shadow:5px 5px 5px rgb(210,210,210);
   border:none;
   cursor: pointer;
-  &:active{
-    box-shadow: inset 5px 5px 5px #9356DC;
+  &:hover
+  {
+    opacity:0.8;
+    box-shadow:5px 5px 5px rgb(105,105,105);
   }
 }
 
@@ -201,7 +204,7 @@ h3
     background-color:rgb(245,245,245);
     border-radius: 20px;
     padding:30px 20px;
-    box-shadow: 5px 5px 5px rgb(220,220,220);
+    box-shadow: 5px 5px 5px rgb(210,210,210);
     &:hover
     {
       background-color:rgba(147,86,220,0.1);
@@ -270,6 +273,7 @@ h3
   text-decoration: none;
   color:black;
   position:relative;
+  box-shadow:5px 5px 5px rgb(210,210,210);
   @include bigscreen-only
   {
    width:35%;
@@ -427,6 +431,7 @@ footer
   background-color:white;
   border-radius: 10px;
   margin-bottom:10px;
+  box-shadow:5px 5px 5px rgb(210,210,210); 
   div
   {
     display: flex;

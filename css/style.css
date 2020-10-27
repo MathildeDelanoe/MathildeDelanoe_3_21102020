@@ -117,11 +117,13 @@ button {
   padding: 10px 20px;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 5px 5px 5px #d2d2d2;
   border: none;
   cursor: pointer;
 }
-button:active {
-  box-shadow: inset 5px 5px 5px #9356DC;
+button:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px dimgray;
 }
 
 h3 {
@@ -154,7 +156,7 @@ h3 {
   background-color: whitesmoke;
   border-radius: 20px;
   padding: 30px 20px;
-  box-shadow: 5px 5px 5px gainsboro;
+  box-shadow: 5px 5px 5px #d2d2d2;
 }
 .fonctionnement_menu div:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -214,6 +216,7 @@ h3 {
   text-decoration: none;
   color: black;
   position: relative;
+  box-shadow: 5px 5px 5px #d2d2d2;
 }
 @media screen and (min-width: 1025px) {
   .vignettes {
@@ -351,6 +354,7 @@ footer ul li i {
   background-color: white;
   border-radius: 10px;
   margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #d2d2d2;
 }
 .vignettes_menu div {
   display: flex;
