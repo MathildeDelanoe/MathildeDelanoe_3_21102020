@@ -208,6 +208,22 @@ h3 {
   }
 }
 
+@keyframes upMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes changeColor {
+  from {
+    color: black;
+  }
+  to {
+    color: rgba(0, 0, 0, 0);
+  }
+}
 .vignettes {
   width: 90%;
   height: 220px;
@@ -233,41 +249,96 @@ h3 {
   right: 10px;
   border-radius: 5px;
   font-size: 0.8em;
+  z-index: 4;
 }
 .vignettes figure {
+  width: 100%;
+  height: 170px;
   margin: 0;
+  position: absolute;
   overflow: hidden;
+  z-index: 3;
+}
+@media screen and (min-width: 1025px) {
+  .vignettes figure {
+    width: 100%;
+    height: 200px;
+  }
 }
 .vignettes img {
   width: 100%;
   height: 170px;
   border-radius: 10px 10px 0px 0px;
   object-fit: cover;
+  z-index: 3;
 }
 @media screen and (min-width: 1025px) {
   .vignettes img {
+    width: 100%;
     height: 300px;
     margin-top: -100px;
   }
 }
 .vignettes .info_restaurants {
-  display: flex;
+  position: absolute;
+  top: 170px;
+  width: 100%;
 }
-.vignettes .info_restaurants div {
+@media screen and (min-width: 1025px) {
+  .vignettes .info_restaurants {
+    top: 200px;
+  }
+}
+.vignettes .info_restaurants div:first-child {
+  position: absolute;
+  top: 10px;
   width: 90%;
 }
-.vignettes .info_restaurants div p:first-child {
+.vignettes .info_restaurants div:first-child p:first-child {
   font-weight: bold;
 }
-.vignettes .info_restaurants div p {
+.vignettes .info_restaurants div:first-child p {
   margin: 0;
   margin-left: 10px;
   font-size: 0.8em;
 }
-.vignettes .info_restaurants i {
-  display: flex;
-  align-items: center;
+.vignettes .info_restaurants .fillHeart {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.vignettes .info_restaurants .testHeart {
+  position: absolute;
+  right: 50%;
+  top: 0px;
+  background: linear-gradient(#FF79DA, #9356DC);
   font-size: 1.1em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vignettes .info_restaurants .myClass {
+  position: absolute;
+  right: 50%;
+  top: 0px;
+  font-size: 1.1em;
+  z-index: 3;
+}
+.vignettes .info_restaurants .myClass:hover + .emptySquare {
+  animation: upMove 2s forwards;
+}
+.vignettes .info_restaurants .myClass:hover {
+  animation: changeColor 1s forwards;
+}
+.vignettes .info_restaurants .emptySquare {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background-color: white;
+  right: 45%;
+  z-index: 2;
+  top: 0px;
 }
 
 footer {
