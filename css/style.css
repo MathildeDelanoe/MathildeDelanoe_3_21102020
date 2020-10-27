@@ -8,6 +8,7 @@
 }
 body {
   font-family: Roboto, Arial, sans-serif;
+  position: relative;
 }
 
 h4 {
@@ -25,6 +26,7 @@ h4 {
   }
 }
 
+/* header */
 .fa-arrow-left {
   position: absolute;
   top: 5px;
@@ -69,6 +71,7 @@ header figure img {
   width: 100%;
 }
 
+/* en_tete */
 .localisation {
   height: 40px;
   display: flex;
@@ -126,13 +129,25 @@ button:hover {
   box-shadow: 5px 5px 5px dimgray;
 }
 
+/* fonctionnement */
 h3 {
-  margin-left: 15px;
+  padding-left: 15px;
+}
+@media screen and (min-width: 1025px) {
+  h3 {
+    padding-left: 0;
+  }
 }
 
 .fonctionnement {
   padding-top: 20px;
   padding-bottom: 50px;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .fonctionnement_menu {
@@ -183,6 +198,7 @@ h3 {
   font-weight: bold;
 }
 
+/* restaurants */
 .restaurants {
   background-color: #f0f0f0;
   padding-bottom: 30px;
@@ -190,6 +206,12 @@ h3 {
 .restaurants h3 {
   padding-top: 30px;
   margin-bottom: 0;
+}
+@media screen and (min-width: 1025px) {
+  .restaurants h3 {
+    width: 80%;
+    margin: auto;
+  }
 }
 .restaurants > div {
   width: 100%;
@@ -201,7 +223,9 @@ h3 {
 }
 @media screen and (min-width: 1025px) {
   .restaurants > div {
+    width: 80%;
     height: 650px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -270,6 +294,7 @@ h3 {
   font-size: 1.1em;
 }
 
+/* footer */
 footer {
   height: 180px;
   background-color: #3c3c3c;
@@ -301,6 +326,8 @@ footer ul li i {
   margin-right: 5px;
 }
 
+/* page francaise */
+/* section */
 .francaise {
   background-color: whitesmoke;
   margin-top: -40px;
@@ -346,7 +373,6 @@ footer ul li i {
   width: 40%;
   margin-top: 20px;
   margin-bottom: 70px;
-  text-align: center;
 }
 
 .vignettes_menu {
@@ -398,6 +424,7 @@ footer ul li i {
   }
 }
 
+/* image */
 .photo_pres {
   margin: 0;
   width: 100%;
@@ -413,6 +440,91 @@ footer ul li i {
     margin-top: -200px;
     object-fit: cover;
   }
+}
+
+/* Chargement */
+.chargement {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  animation: disappear 2s linear forwards;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
+
+.cercle {
+  border: 3px solid;
+  margin: auto;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.cercle1 {
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-top: 250px;
+  animation: rotate 2s linear forwards;
+}
+
+.cercle2 {
+  border-top-color: #99E2D0;
+  border-bottom-color: #99E2D0;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: -116px;
+  animation: rotate2 2s linear forwards;
+}
+
+.cercle3 {
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  top: -252px;
+  animation: rotate 2s linear forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(-360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+#texte {
+  color: #9356DC;
+  font-family: Arial;
+  font-size: 10px;
+  position: relative;
+  top: -335px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -43,6 +43,7 @@ $breakpoints:
 body
 {
   font-family: Roboto, Arial, sans-serif;
+  position:relative;
 }
 
 h4
@@ -60,7 +61,7 @@ h4
   }
 }
 
-
+/* header */
 .fa-arrow-left{
   position:absolute;
   top:5px;
@@ -107,6 +108,7 @@ header
   width:100%;
 }
 
+/* en_tete */
 .localisation
 {
   height:40px;
@@ -172,15 +174,25 @@ button
   }
 }
 
+/* fonctionnement */
 h3
 {
-  margin-left:15px;
+  padding-left:15px;
+  @include bigscreen-only
+  {
+    padding-left:0;
+  }
 }
 
 .fonctionnement
 {
   padding-top:20px;
   padding-bottom:50px;
+  @include bigscreen-only
+  {
+    width:80%;
+    margin:auto;
+  }
 }
 
 .fonctionnement_menu
@@ -237,6 +249,7 @@ h3
   }
 }
 
+/* restaurants */
 .restaurants
 {
   background-color:rgb(240,240,240);
@@ -245,6 +258,11 @@ h3
   {
     padding-top:30px;
     margin-bottom:0;
+    @include bigscreen-only
+    {
+      width:80%;
+      margin:auto;
+    }
   }
   > div
   {
@@ -256,7 +274,9 @@ h3
     flex-direction:column;
     @include bigscreen-only
     {
+      width:80%;
       height:650px;
+      margin:auto;
       display:flex;
       flex-direction:row;
       flex-wrap: wrap;
@@ -333,6 +353,7 @@ h3
  }
 }
 
+/* footer */
 footer
 {
   height:180px;
@@ -369,6 +390,8 @@ footer
   }
 }
 
+/* page francaise */
+/* section */
 .francaise
 {
   background-color: rgb(245,245,245);
@@ -421,7 +444,6 @@ footer
     width:40%;
     margin-top:20px;
     margin-bottom:70px;
-    text-align: center;
   }
 }
 
@@ -482,7 +504,7 @@ footer
     }
   }
 }
-
+/* image */
 .photo_pres
 {
   margin:0;
@@ -499,4 +521,85 @@ footer
       object-fit:cover;
     }
   }
+}
+
+/* Chargement */
+.chargement {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  animation: disappear 2s linear forwards;
+  position:absolute;
+  background-color: white;
+  z-index:1;
+}
+.cercle
+{
+  border: 3px solid;
+  margin: auto;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.cercle1 {
+  border-top-color: #FF79DA;
+  border-bottom-color: #FF79DA;
+  width: 100px;
+  height:100px;
+  position:relative;
+  margin-top: 250px;
+  animation: rotate 2s linear forwards;
+}
+.cercle2 {
+  border-top-color: #99E2D0;
+  border-bottom-color: #99E2D0;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top:-116px;
+  animation: rotate2 2s linear forwards;
+}
+.cercle3 {
+  border-top-color: #9356DC;
+  border-bottom-color: #9356DC;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  top:-252px;
+  animation: rotate 2s linear forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(-360deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateZ(360deg)
+  }
+  100% {
+    transform: rotateZ(0deg)
+  }
+}
+@keyframes disappear {
+  0%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+#texte {
+  color: #9356DC;
+  font-family: Arial;
+  font-size: 10px;
+  position: relative;
+  top: -335px;
 }
