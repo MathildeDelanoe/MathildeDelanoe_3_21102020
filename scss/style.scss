@@ -268,10 +268,7 @@ h3
     transform: translateY(0);
   }
   to{
-    transform: translateY(-50px);
-    // z-index:0;
-    // background-color: linear-gradient(#FF79DA,#9356DC);
-    
+    transform: translateY(-50px);    
   }
 }
 
@@ -287,7 +284,7 @@ h3
 .vignettes
 {
   width:90%;
-  height:220px;
+  height:230px;
   background-color:white;
   border-radius: 10px;
   text-decoration: none;
@@ -297,7 +294,7 @@ h3
   @include bigscreen-only
   {
     width:35%;
-    height:250px;
+    height:260px;
   }
  span
  {
@@ -309,7 +306,7 @@ h3
    right:10px;
    border-radius:5px;
    font-size: 0.8em;
-   z-index:4;
+   z-index:3;
  }
  figure
  {
@@ -318,7 +315,7 @@ h3
    margin:0;
    position:absolute;
    overflow:hidden;
-   z-index:3;
+   z-index:2;
    @include bigscreen-only
    {
       width:100%;
@@ -331,7 +328,7 @@ h3
    height:170px;
    border-radius: 10px 10px 0px 0px;
    object-fit: cover;
-   z-index:3;
+   z-index:2;
    @include bigscreen-only
    {
      width:100%;
@@ -341,8 +338,6 @@ h3
  } 
  .info_restaurants
  {
-    // display:flex;
-    // border: 1px solid red;
     position:absolute;
     top: 170px;
     width: 100%;
@@ -354,8 +349,6 @@ h3
     {
       position:absolute;
       top: 10px;
-      width:90%;
-      // border: 1px solid blue;
       p:first-child
       {
         font-weight: bold;
@@ -367,76 +360,43 @@ h3
         font-size:0.8em;
       }
     }
-    .fillHeart
-    {
-      width:10%;
-      height:100%;
-      // border: 1px dashed blue;
-      position: absolute;
-      right:0px;
-      top: 10px;
-      // display:flex;
-      // justify-content: center;
-    }
-    // .i
-    // {
-    //   position: absolute;
-    //   right: 50%;
-    //   top:0px;
-    //   font-size: 1.1em;
-    // }
-    .testHeart
+    .coeurRempli
     {
       position: absolute;
-      right: 50%;
-      top:0px;
+      right: 5%;
+      top:15px;
       background: linear-gradient(#FF79DA,#9356DC);
       font-size: 1.1em;
-      // -webkit-text-stroke: 1px white;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      // background-color: -moz-linear-gradient(#ff79da, #9356dc);
     }
-    .myClass
+    .coeurVide
     {
       position: absolute;
-      right: 50%;
-      top:0px;
+      right: 5%;
+      top: 15px;
       font-size: 1.1em;
-      // -webkit-text-stroke: 1px green;
-      &:hover + .emptySquare{
+      &:hover + .cache
+      {
         animation:upMove 2s forwards;
       }
       &:hover
       {
         animation:changeColor 1s forwards;
       }
-      z-index:3;
+      z-index:2;
     }
-    
-    .emptySquare{
+    .cache{
       height:20px;
       width:20px;
+      background-color:white;
       position: absolute;
-      // border:1px solid blue;
-      background-color: rgba(255,255,255,1);
-      right:45%;
-      z-index:2;
-      top: 0px;
+      right:5%;
+      top: 13px;
+      z-index:1;
     }
   }
 }
-
-// .fa-heart
-// {
-//   position: absolute;
-//   text-align: center;
-//   left: 25px;
-//   top: 25px;
-//   // color: red;
-//   //background: -moz-linear-gradient(#ff79da, #9356dc);
-//   color: linear-gradient(#ff79da, #9356dc);
-// }
 
 footer
 {

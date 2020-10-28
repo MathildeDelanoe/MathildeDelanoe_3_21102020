@@ -226,7 +226,7 @@ h3 {
 }
 .vignettes {
   width: 90%;
-  height: 220px;
+  height: 230px;
   background-color: white;
   border-radius: 10px;
   text-decoration: none;
@@ -237,7 +237,7 @@ h3 {
 @media screen and (min-width: 1025px) {
   .vignettes {
     width: 35%;
-    height: 250px;
+    height: 260px;
   }
 }
 .vignettes span {
@@ -249,7 +249,7 @@ h3 {
   right: 10px;
   border-radius: 5px;
   font-size: 0.8em;
-  z-index: 4;
+  z-index: 3;
 }
 .vignettes figure {
   width: 100%;
@@ -257,7 +257,7 @@ h3 {
   margin: 0;
   position: absolute;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
 }
 @media screen and (min-width: 1025px) {
   .vignettes figure {
@@ -270,7 +270,7 @@ h3 {
   height: 170px;
   border-radius: 10px 10px 0px 0px;
   object-fit: cover;
-  z-index: 3;
+  z-index: 2;
 }
 @media screen and (min-width: 1025px) {
   .vignettes img {
@@ -292,7 +292,6 @@ h3 {
 .vignettes .info_restaurants div:first-child {
   position: absolute;
   top: 10px;
-  width: 90%;
 }
 .vignettes .info_restaurants div:first-child p:first-child {
   font-weight: bold;
@@ -302,43 +301,36 @@ h3 {
   margin-left: 10px;
   font-size: 0.8em;
 }
-.vignettes .info_restaurants .fillHeart {
-  width: 10%;
-  height: 100%;
+.vignettes .info_restaurants .coeurRempli {
   position: absolute;
-  right: 0px;
-  top: 10px;
-}
-.vignettes .info_restaurants .testHeart {
-  position: absolute;
-  right: 50%;
-  top: 0px;
+  right: 5%;
+  top: 15px;
   background: linear-gradient(#FF79DA, #9356DC);
   font-size: 1.1em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.vignettes .info_restaurants .myClass {
+.vignettes .info_restaurants .coeurVide {
   position: absolute;
-  right: 50%;
-  top: 0px;
+  right: 5%;
+  top: 15px;
   font-size: 1.1em;
-  z-index: 3;
+  z-index: 2;
 }
-.vignettes .info_restaurants .myClass:hover + .emptySquare {
+.vignettes .info_restaurants .coeurVide:hover + .cache {
   animation: upMove 2s forwards;
 }
-.vignettes .info_restaurants .myClass:hover {
+.vignettes .info_restaurants .coeurVide:hover {
   animation: changeColor 1s forwards;
 }
-.vignettes .info_restaurants .emptySquare {
+.vignettes .info_restaurants .cache {
   height: 20px;
   width: 20px;
-  position: absolute;
   background-color: white;
-  right: 45%;
-  z-index: 2;
-  top: 0px;
+  position: absolute;
+  right: 5%;
+  top: 13px;
+  z-index: 1;
 }
 
 footer {
