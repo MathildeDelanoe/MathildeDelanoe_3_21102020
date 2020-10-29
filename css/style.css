@@ -456,18 +456,19 @@ footer ul li i {
 }
 
 .vignettes_menu {
-  height: 60px;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 10px;
+  padding: 8px 0px 10px 0px;
   box-shadow: 5px 5px 5px #d2d2d2;
 }
 .vignettes_menu div {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
 }
 .vignettes_menu div p:first-child {
   font-size: 0.9em;
+  width: 90%;
 }
 .vignettes_menu p {
   margin: 0;
@@ -480,12 +481,13 @@ footer ul li i {
 }
 
 .nom {
-  padding-top: 8px;
+  width: 70%;
+  font-size: 0.9em;
 }
 
 .prix {
   padding-right: 10px;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .menu {
@@ -520,6 +522,11 @@ footer ul li i {
     margin-top: -200px;
     object-fit: cover;
   }
+}
+
+.photo_pres_note img {
+  height: 250px;
+  object-fit: cover;
 }
 
 /* Chargement */
