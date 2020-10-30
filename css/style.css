@@ -459,20 +459,62 @@ footer ul li i {
   background-color: white;
   border-radius: 10px;
   margin-bottom: 10px;
-  padding: 8px 0px 10px 0px;
   box-shadow: 5px 5px 5px #d2d2d2;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
-.vignettes_menu div {
+.vignettes_menu:hover div:first-child {
+  width: 80%;
+}
+.vignettes_menu:hover .check {
+  transform: translateX(0px);
+}
+.vignettes_menu:hover .fa-check-circle {
+  animation: rotate 0.8s forwards;
+}
+.vignettes_menu:hover .nom {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.vignettes_menu:hover > div div p:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.vignettes_menu div:first-child {
+  padding: 8px 0px 10px 0px;
+  width: 100%;
+  transition: 1s;
+}
+.vignettes_menu div:first-child div {
   display: flex;
   align-items: flex-end;
 }
-.vignettes_menu div p:first-child {
+.vignettes_menu div:first-child div p:first-child {
   font-size: 0.9em;
   width: 90%;
 }
-.vignettes_menu p {
+.vignettes_menu div:first-child p {
   margin: 0;
   padding-left: 10px;
+}
+
+.check {
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  transition: 1s;
+  transform: translateX(60px);
+  transform-origin: right;
 }
 
 .nom, .prix {
@@ -488,6 +530,10 @@ footer ul li i {
 .prix {
   padding-right: 10px;
   font-size: 0.8em;
+}
+
+.fa-check-circle {
+  color: white;
 }
 
 .menu {
