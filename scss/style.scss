@@ -175,6 +175,7 @@ button
   box-shadow:5px 5px 5px rgb(210,210,210);
   border:none;
   cursor: pointer;
+  outline:none;
   &:hover
   {
     opacity:0.8;
@@ -291,50 +292,6 @@ h3
     }
   }
 }
-@-webkit-keyframes upMove
-{
-  from
-  {
-    transform: translateY(0);
-  }
-  to
-  {
-    transform: translateY(-50px);    
-  }
-}
-@keyframes upMove
-{
-  from
-  {
-    transform: translateY(0);
-  }
-  to
-  {
-    transform: translateY(-50px);    
-  }
-}
-
-@-webkit-keyframes changeColor{
-  from
-  {
-    color: rgba(0,0,0,1);
-  }
-  to
-  {
-    color: rgba(0,0,0,0);
-  }
-}
-
-@keyframes changeColor{
-  from
-  {
-    color: rgba(0,0,0,1);
-  }
-  to
-  {
-    color: rgba(0,0,0,0);
-  }
-}
 
 .vignettes
 {
@@ -433,6 +390,7 @@ h3
       right: 5%;
       top: 15px;
       font-size: 1.1em;
+      z-index:2;
       &:hover + .cache
       {
         -webkit-animation:upMove 2s forwards;
@@ -443,7 +401,6 @@ h3
         -webkit-animation:changeColor 1s forwards;
                 animation:changeColor 1s forwards;
       }
-      z-index:2;
     }
     .cache
     {
@@ -455,6 +412,51 @@ h3
       top: 13px;
       z-index:1;
     }
+  }
+}
+
+@-webkit-keyframes upMove
+{
+  from
+  {
+    transform: translateY(0);
+  }
+  to
+  {
+    transform: translateY(-50px);    
+  }
+}
+@keyframes upMove
+{
+  from
+  {
+    transform: translateY(0);
+  }
+  to
+  {
+    transform: translateY(-50px);    
+  }
+}
+
+@-webkit-keyframes changeColor{
+  from
+  {
+    color: rgba(0,0,0,1);
+  }
+  to
+  {
+    color: rgba(0,0,0,0);
+  }
+}
+
+@keyframes changeColor{
+  from
+  {
+    color: rgba(0,0,0,1);
+  }
+  to
+  {
+    color: rgba(0,0,0,0);
   }
 }
 
@@ -792,7 +794,8 @@ footer
 }
 
 /* Chargement */
-.chargement {
+.chargement 
+{
   text-align: center;
   height: 100%;
   width: 100%;
@@ -810,7 +813,9 @@ footer
   border-left-color: transparent;
   border-right-color: transparent;
 }
-.cercle1 {
+
+.cercle1 
+{
   border-top-color: $secondary;
   border-bottom-color: $secondary;
   width: 100px;
@@ -820,7 +825,9 @@ footer
   -webkit-animation: rotate 2s linear forwards;
           animation: rotate 2s linear forwards;
 }
-.cercle2 {
+
+.cercle2 
+{
   border-top-color: $tertiary;
   border-bottom-color:$tertiary;
   width: 120px;
@@ -830,7 +837,9 @@ footer
   -webkit-animation: rotate2 2s linear forwards;
           animation: rotate2 2s linear forwards;
 }
-.cercle3 {
+
+.cercle3 
+{
   border-top-color: $primary;
   border-bottom-color: $primary;
   width: 140px;
@@ -840,6 +849,7 @@ footer
   -webkit-animation: rotate 2s linear forwards;
           animation: rotate 2s linear forwards;
 }
+
 @-webkit-keyframes rotate {
   0% {
     transform: rotateZ(-360deg)

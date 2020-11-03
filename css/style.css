@@ -123,6 +123,7 @@ button {
   box-shadow: 5px 5px 5px #d2d2d2;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 button:hover {
   opacity: 0.8;
@@ -232,38 +233,6 @@ h3 {
   }
 }
 
-@-webkit-keyframes upMove {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50px);
-  }
-}
-@keyframes upMove {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-50px);
-  }
-}
-@-webkit-keyframes changeColor {
-  from {
-    color: black;
-  }
-  to {
-    color: rgba(0, 0, 0, 0);
-  }
-}
-@keyframes changeColor {
-  from {
-    color: black;
-  }
-  to {
-    color: rgba(0, 0, 0, 0);
-  }
-}
 .vignettes {
   width: 90%;
   height: 230px;
@@ -377,6 +346,38 @@ h3 {
   z-index: 1;
 }
 
+@-webkit-keyframes upMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes upMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes changeColor {
+  from {
+    color: black;
+  }
+  to {
+    color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes changeColor {
+  from {
+    color: black;
+  }
+  to {
+    color: rgba(0, 0, 0, 0);
+  }
+}
 /* image */
 .photo_pres {
   margin: 0;
