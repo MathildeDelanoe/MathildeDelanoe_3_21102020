@@ -565,6 +565,56 @@ footer ul li i {
   animation: rotate 0.8s forwards;
 }
 
+.vig-1 {
+  animation: AppearMenu 0.5s 0.1s both;
+}
+
+.vig-2 {
+  animation: AppearMenu 0.5s 0.2s both;
+}
+
+.vig-3 {
+  animation: AppearMenu 0.5s 0.3s both;
+}
+
+.vig-4 {
+  animation: AppearMenu 0.5s 0.4s both;
+}
+
+.vig-5 {
+  animation: AppearMenu 0.5s 0.5s both;
+}
+
+.vig-6 {
+  animation: AppearMenu 0.5s 0.6s both;
+}
+
+.vig-7 {
+  animation: AppearMenu 0.5s 0.7s both;
+}
+
+.vig-8 {
+  animation: AppearMenu 0.5s 0.8s both;
+}
+
+.vig-9 {
+  animation: AppearMenu 0.5s 0.9s both;
+}
+
+.vig-10 {
+  animation: AppearMenu 0.5s 1s both;
+}
+
+@keyframes AppearMenu {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .nom {
   width: 70%;
   padding-left: 10px;
