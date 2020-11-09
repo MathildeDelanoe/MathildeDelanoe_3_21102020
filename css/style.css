@@ -129,6 +129,11 @@ button:hover {
   opacity: 0.8;
   box-shadow: 5px 5px 5px dimgray;
 }
+@media screen and (max-width: 245px) {
+  button {
+    margin-top: 5px;
+  }
+}
 
 /* fonctionnement */
 h3 {
@@ -165,6 +170,11 @@ h3 {
     justify-content: space-around;
   }
 }
+@media screen and (max-width: 245px) {
+  .fonctionnement_menu {
+    height: 350px;
+  }
+}
 .fonctionnement_menu div {
   width: 280px;
   display: flex;
@@ -173,6 +183,11 @@ h3 {
   border-radius: 20px;
   padding: 30px 20px;
   box-shadow: 5px 5px 5px #d2d2d2;
+}
+@media screen and (max-width: 245px) {
+  .fonctionnement_menu div {
+    width: 70%;
+  }
 }
 .fonctionnement_menu div:hover {
   background-color: rgba(147, 86, 220, 0.1);
@@ -516,6 +531,11 @@ footer ul li i {
   margin-top: 20px;
   margin-bottom: 70px;
 }
+@media screen and (max-width: 245px) {
+  .nom_menu button {
+    width: 70%;
+  }
+}
 
 .vignettes_menu {
   background-color: white;
@@ -561,50 +581,70 @@ footer ul li i {
   right: 0%;
 }
 .vignettes_menu:hover .fa-check-circle {
-  -webkit-animation: rotate 0.8s forwards;
-  animation: rotate 0.8s forwards;
+  -webkit-animation: rotationHoraire 0.5s 0.2s forwards;
+  animation: rotationHoraire 0.5s 0.2s forwards;
 }
 
 .vig-1 {
+  -webkit-animation: AppearMenu 0.5s 0.1s both;
   animation: AppearMenu 0.5s 0.1s both;
 }
 
 .vig-2 {
+  -webkit-animation: AppearMenu 0.5s 0.2s both;
   animation: AppearMenu 0.5s 0.2s both;
 }
 
 .vig-3 {
+  -webkit-animation: AppearMenu 0.5s 0.3s both;
   animation: AppearMenu 0.5s 0.3s both;
 }
 
 .vig-4 {
+  -webkit-animation: AppearMenu 0.5s 0.4s both;
   animation: AppearMenu 0.5s 0.4s both;
 }
 
 .vig-5 {
+  -webkit-animation: AppearMenu 0.5s 0.5s both;
   animation: AppearMenu 0.5s 0.5s both;
 }
 
 .vig-6 {
+  -webkit-animation: AppearMenu 0.5s 0.6s both;
   animation: AppearMenu 0.5s 0.6s both;
 }
 
 .vig-7 {
+  -webkit-animation: AppearMenu 0.5s 0.7s both;
   animation: AppearMenu 0.5s 0.7s both;
 }
 
 .vig-8 {
+  -webkit-animation: AppearMenu 0.5s 0.8s both;
   animation: AppearMenu 0.5s 0.8s both;
 }
 
 .vig-9 {
+  -webkit-animation: AppearMenu 0.5s 0.9s both;
   animation: AppearMenu 0.5s 0.9s both;
 }
 
 .vig-10 {
+  -webkit-animation: AppearMenu 0.5s 1s both;
   animation: AppearMenu 0.5s 1s both;
 }
 
+@-webkit-keyframes AppearMenu {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes AppearMenu {
   0% {
     transform: translateY(50px);
@@ -742,8 +782,8 @@ footer ul li i {
   height: 100px;
   position: relative;
   margin-top: 250px;
-  -webkit-animation: rotate 2s linear forwards;
-  animation: rotate 2s linear forwards;
+  -webkit-animation: rotationHoraire 2s linear forwards;
+  animation: rotationHoraire 2s linear forwards;
 }
 
 .cercle2 {
@@ -753,8 +793,8 @@ footer ul li i {
   height: 120px;
   position: relative;
   top: -116px;
-  -webkit-animation: rotate2 2s linear forwards;
-  animation: rotate2 2s linear forwards;
+  -webkit-animation: rotationAntiHoraire 2s linear forwards;
+  animation: rotationAntiHoraire 2s linear forwards;
 }
 
 .cercle3 {
@@ -764,11 +804,11 @@ footer ul li i {
   height: 140px;
   position: relative;
   top: -252px;
-  -webkit-animation: rotate 2s linear forwards;
-  animation: rotate 2s linear forwards;
+  -webkit-animation: rotationHoraire 2s linear forwards;
+  animation: rotationHoraire 2s linear forwards;
 }
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes rotationHoraire {
   0% {
     transform: rotateZ(-360deg);
   }
@@ -776,7 +816,7 @@ footer ul li i {
     transform: rotateZ(0deg);
   }
 }
-@keyframes rotate {
+@keyframes rotationHoraire {
   0% {
     transform: rotateZ(-360deg);
   }
@@ -784,7 +824,7 @@ footer ul li i {
     transform: rotateZ(0deg);
   }
 }
-@-webkit-keyframes rotate2 {
+@-webkit-keyframes rotationAntiHoraire {
   0% {
     transform: rotateZ(360deg);
   }
@@ -792,7 +832,7 @@ footer ul li i {
     transform: rotateZ(0deg);
   }
 }
-@keyframes rotate2 {
+@keyframes rotationAntiHoraire {
   0% {
     transform: rotateZ(360deg);
   }
@@ -807,9 +847,12 @@ footer ul li i {
   75% {
     opacity: 1;
   }
+  99% {
+    z-index: 4;
+  }
   100% {
     opacity: 0;
-    pointer-events: none;
+    z-index: -1;
   }
 }
 @keyframes disappear {
@@ -819,9 +862,12 @@ footer ul li i {
   75% {
     opacity: 1;
   }
+  99% {
+    z-index: 4;
+  }
   100% {
     opacity: 0;
-    pointer-events: none;
+    z-index: -1;
   }
 }
 #texte {
